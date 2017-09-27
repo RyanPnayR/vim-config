@@ -4,6 +4,16 @@ if has("gui_macvim")
   colo onedark
 endif
 
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 set showmode            " Show current mode.
 set ruler               " Show the line and column numbers of the cursor.
 set number              " Show the line numbers on the left side.
@@ -28,7 +38,7 @@ set colorcolumn=80
 " Tell Vim which characters to show for expanded TABs,
 " trailing whitespace, and end-of-lines. VERY useful!
 if &listchars ==# 'eol:$'
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
 set list                " Show problematic characters.
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
@@ -79,5 +89,15 @@ autocmd FileType scss setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType scss set iskeyword+=-
 autocmd FileType htmldjango setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
+
+"autocmd BufNewFile *.sh 0r ~/.vim/skeleton.sh
+autocmd BufNewFile *.sh exe "normal i#!\<TAB>"
+
+" Custom surrounds
+let g:surround_custom_mapping = {}
+let g:surround_custom_mapping.sh = {
+      \ '4': "$(\r)",
+      \ '$': "${\r}",
+      \ }
 
 :nmap <silent> <leader>d <Plug>DashSearch
