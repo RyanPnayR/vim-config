@@ -5,6 +5,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
+Plug 't9md/vim-surround_custom_mapping'
 Plug 'vim-airline/vim-airline'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
@@ -20,6 +21,10 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rizzatti/dash.vim'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'sirver/ultisnips'
+
+" Vim skeletons
+Plug 'pgilad/vim-skeletons'
 
 " Color-schemes
 Plug 'tomasr/molokai'
