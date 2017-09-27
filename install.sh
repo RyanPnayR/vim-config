@@ -12,6 +12,7 @@ maybe_do_backup() {
   if  ! [[ "$REPLY" =~ ^[Yy]$ ]]; then
     skip_backup && return 0
   fi
+  echo
 
   # Check if $vim_dir is symlink
   if [ -L $vim_dir ]; then
@@ -24,11 +25,12 @@ maybe_do_backup() {
       skip_backup && return 0
     fi
   fi
+  echo
 
   if do_backup ; then
-    echo "Backup complete" && return 0
+    echo "Backup complete"; echo; return 0
   else
-    fail "Could not complete backup."
+    fail "Could not complete backup"
   fi
 }
 
@@ -37,7 +39,7 @@ do_backup() {
   backup_name=$(date +%Y-%m-%d_%s)
   echo "Copying $vim_dir to $backup_dir/$backup_name"
   mkdir -p $backup_dir
-  cp -RL $vim_dir $backup_dir/$backup_name
+  cp -RL $vim_dir $backup_dir/$backup_name && return 0
 }
 
 do_delete() {
@@ -50,7 +52,7 @@ do_delete() {
 }
 
 do_install() {
-  echo "Creating symlink"
+  echo "Creating symlink: ln -s $config_dir $vim_dir"
   ln -s $config_dir $vim_dir && return 0
 
   # Failed to return
@@ -69,7 +71,7 @@ main() {
   # Abort if we are already installed
   [ -L $vim_dir ] && cd $vim_dir && realpath=$(pwd -P)
   if [[ "$realpath" = "$config_dir" ]]; then
-    echo "Already installed." && exit 0
+    echo "Already installed"; echo "Done"; exit 0
   fi
 
   # Ask for backup if necessary
