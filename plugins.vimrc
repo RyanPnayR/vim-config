@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Plugs
+Plug 'sirver/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -14,14 +15,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'css'] }
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
 " Plug '2072/php-indenting-for-vim'
 Plug 'captbaritone/better-indent-support-for-php-with-html'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rizzatti/dash.vim'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'sirver/ultisnips'
 
 " Vim skeletons
 Plug 'pgilad/vim-skeletons'
