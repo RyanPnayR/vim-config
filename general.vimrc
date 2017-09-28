@@ -1,6 +1,8 @@
-if has("gui_macvim")
-  set t_Co=256
-  set termguicolors
+set t_Co=256
+set termguicolors
+if $GUI_VIM == "no"
+  colo molokai
+else
   colo onedark
 endif
 
@@ -14,6 +16,7 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+set viminfo='100,<50,s10,h,n~/.vim/cache/viminfo
 set showmode            " Show current mode.
 set ruler               " Show the line and column numbers of the cursor.
 set number              " Show the line numbers on the left side.
