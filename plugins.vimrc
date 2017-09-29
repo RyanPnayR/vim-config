@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 't9md/vim-surround_custom_mapping'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-haml'
@@ -27,12 +28,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'pgilad/vim-skeletons'
 
 " Color-schemes
+Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
 " Plug Settings
+" UltiSnips
+let g:UltiSnipsSnippetsDir = $HOME . "/.vim/UltiSnips"
 " Airline
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -44,6 +48,7 @@ let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
+let g:airline_theme = 'lucius'
 "Nerdtree
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']

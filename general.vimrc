@@ -1,7 +1,7 @@
 set t_Co=256
 set termguicolors
 if $GUI_VIM == "no"
-  colo molokai
+  colo gruvbox
 else
   colo onedark
 endif
