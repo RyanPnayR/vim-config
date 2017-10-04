@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plugs
 Plug 'valloric/youcompleteme'
+let g:ycm_autoclose_preview_window_after_completion = 1
 Plug 'easymotion/vim-easymotion'
 Plug 'sirver/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
