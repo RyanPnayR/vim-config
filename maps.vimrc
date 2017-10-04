@@ -1,5 +1,8 @@
 map <C-u> :NERDTreeToggle<CR>
 nmap <C-c> :NERDTreeCWD<CR>
+
+map <Leader><Space> <Plug>(easymotion-prefix)
+
 " CtrlP
 " Open file menu
 nnoremap <Leader>o :CtrlP<CR>
