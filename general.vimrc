@@ -16,7 +16,8 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-set viminfo='100,<50,s10,h,n~/.vim/cache/viminfo
+let g:netrw_home = '~/.cache'
+set viminfo='100,<50,s10,h,n~/.cache/viminfo
 set showmode            " Show current mode.
 set ruler               " Show the line and column numbers of the cursor.
 set number              " Show the line numbers on the left side.

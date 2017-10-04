@@ -8,6 +8,8 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 " Open most recently used files
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
+let g:UltiSnipsExpandTrigger = "<C-S>"
+
 nnoremap ; :
 nnoremap , ;
 nnoremap <leader>h :noh<CR>
