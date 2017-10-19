@@ -6,6 +6,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 Plug 'easymotion/vim-easymotion'
 Plug 'sirver/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tmhedberg/simpylfold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'

@@ -3,9 +3,18 @@ nmap <C-c> :NERDTreeCWD<CR>
 
 map <Leader><Space> <Plug>(easymotion-prefix)
 
+" Folding
+nnoremap <Leader>a za
+nnoremap <Leader>r zR
+nnoremap <Leader>m zM
+nnoremap <Leader>O zO
+nnoremap <Leader>o zO
+nnoremap <Leader>j zj
+nnoremap <Leader>k zk
+
 " CtrlP
 " Open file menu
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>p :CtrlP<CR>
 " Open buffer menu
 nnoremap <Leader>b :CtrlPBuffer<CR>
 " Open most recently used files
