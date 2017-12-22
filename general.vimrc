@@ -2,8 +2,10 @@ set t_Co=256
 set termguicolors
 if $GUI_VIM == "no"
   colo gruvbox
+  let g:airline_theme = 'lucius'
 else
   colo onedark
+  let g:airline_theme = 'onedark'
 endif
 
 if exists('$TMUX')

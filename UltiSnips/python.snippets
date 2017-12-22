@@ -2,3 +2,20 @@ snippet _skel "Sha-Bang skeleton"
 #!/usr/bin/env python
 $0
 endsnippet
+
+snippet main "Check if main for importable module"
+def main():
+    $0
+
+if __name__ == '__main__':
+    main()
+endsnippet
+
+snippet init "Class init method"
+def __init__(self$1):
+    $0
+endsnippet
+
+snippet "(\w+)? = nt" "Namedtuple" r
+`!p snip.rv = match.group(1)` = namedtuple('`!p snip.rv = match.group(1)`', [$0])
+endsnippet
