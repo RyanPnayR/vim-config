@@ -18,6 +18,10 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+if !has('nvim')
+  set ttymouse=xterm2
+endif
+
 let g:netrw_home = '~/.cache'
 set viminfo='100,<50,s10,h,n~/.cache/viminfo
 set showmode            " Show current mode.
