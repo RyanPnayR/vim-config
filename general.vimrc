@@ -1,12 +1,16 @@
 set t_Co=256
 set termguicolors
-if $GUI_VIM == "no"
-  colo gruvbox
-  let g:airline_theme = 'lucius'
-else
-  colo onedark
-  let g:airline_theme = 'onedark'
-endif
+"if $GUI_VIM == "no"
+  "colo gruvbox
+  "let g:airline_theme = 'lucius'
+"else
+  "colo onedark
+  "let g:airline_theme = 'onedark'
+"endif
+"colo gruvbox
+"let g:airline_theme = 'lucius'
+colo onedark
+let g:airline_theme = 'onedark'
 
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -20,10 +24,12 @@ endif
 
 if !has('nvim')
   set ttymouse=xterm2
+  set viminfo='100,<50,s10,h,n~/.cache/viminfo
+else
+  set viminfo='100,<50,s10,h,n~/.cache/nviminfo
 endif
 
 let g:netrw_home = '~/.cache'
-set viminfo='100,<50,s10,h,n~/.cache/viminfo
 set showmode            " Show current mode.
 set ruler               " Show the line and column numbers of the cursor.
 set number              " Show the line numbers on the left side.
@@ -37,7 +43,7 @@ set shiftwidth=2        " Indentation amount for < and > commands.
 map <D-d> yyp
 set noerrorbells        " No beeps.
 set modeline            " Enable modeline.
-set esckeys             " Cursor keys in insert mode.
+" set esckeys             " Cursor keys in insert mode.
 set linespace=0         " Set line-spacing to minimum.
 set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
 set splitbelow          " Horizontal split below current.
