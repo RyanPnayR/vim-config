@@ -27,6 +27,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rizzatti/dash.vim'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-capslock'
+Plug 'dag/vim-fish'
 
 " Vim skeletons
 Plug 'pgilad/vim-skeletons'
