@@ -106,9 +106,6 @@ autocmd FileType scss set iskeyword+=-
 autocmd FileType htmldjango setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
 
-"autocmd BufNewFile *.sh 0r ~/.vim/skeleton.sh
-autocmd BufNewFile *.sh exe "normal i#!\<TAB>"
-
 " Custom surrounds
 let g:surround_custom_mapping = {}
 let g:surround_custom_mapping.sh = {
