@@ -1,5 +1,18 @@
-set t_Co=256
+if &term =~# '^screen'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+if &term =~ '256color'
+  set t_ut=
+endif
+
+"set t_Co=256
 set termguicolors
+"let g:onedark_termcolors=16
+colo onedark
+let g:airline_theme = 'onedark'
+
 "if $GUI_VIM == "no"
   "colo gruvbox
   "let g:airline_theme = 'lucius'
@@ -9,9 +22,7 @@ set termguicolors
 "endif
 "colo gruvbox
 "let g:airline_theme = 'lucius'
-colo onedark
-let g:airline_theme = 'onedark'
-
+"
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
