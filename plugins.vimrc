@@ -28,10 +28,8 @@ Plug 'rizzatti/dash.vim'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-capslock'
-Plug 'dag/vim-fish'
-
-" Vim skeletons
-Plug 'pgilad/vim-skeletons'
+"Plug 'dag/vim-fish'
+Plug 'azizlight/fish.vim'
 
 " Color-schemes
 Plug 'flazz/vim-colorschemes'
