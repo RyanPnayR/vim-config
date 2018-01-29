@@ -24,6 +24,9 @@ let g:UltiSnipsExpandTrigger = "<C-S>"
 
 nnoremap ; :
 nnoremap , ;
+nnoremap " ,
+vnoremap , ;
+vnoremap " ,
 nnoremap <leader>h :noh<CR>
 nnoremap <space> <nop>
 map <space> <leader>
@@ -37,6 +40,10 @@ nnoremap <BS> gg
 " Stop cursor from jumping over wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+" Scroll up and down a bit faster
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 " Make HOME and END behave like shell
 inoremap <C-E> <End>
 inoremap <C-A> <Home>
