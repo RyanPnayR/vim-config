@@ -48,6 +48,10 @@ else
   set viminfo='100,<50,s10,h,n~/.cache/nviminfo
 endif
 
+" Think I need these for vim-fish
+syntax enable
+filetype plugin indent on
+
 let g:netrw_home = '~/.cache'
 set showmode            " Show current mode.
 set ruler               " Show the line and column numbers of the cursor.
