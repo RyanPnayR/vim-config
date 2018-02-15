@@ -2,7 +2,20 @@ call plug#begin('~/.vim/plugged')
 
 " Plugs
 Plug 'valloric/youcompleteme'
+" python with virtualenv support
+"python << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+    "project_base_dir = os.environ['VIRTUAL_ENV']
+    "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    "execfile(activate_this, dict(__file__=activate_this))
+"EOF
+let g:ycm_server_python_interpreter='python3'
+"let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_python_binary_path = 'python3'
 Plug 'easymotion/vim-easymotion'
 Plug 'sirver/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -30,6 +43,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-capslock'
 "Plug 'dag/vim-fish'
 Plug 'azizlight/fish.vim'
+Plug 'glench/vim-jinja2-syntax'
 
 " Color-schemes
 Plug 'flazz/vim-colorschemes'
