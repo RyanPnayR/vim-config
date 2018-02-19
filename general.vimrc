@@ -52,6 +52,9 @@ endif
 syntax enable
 filetype plugin indent on
 
+" Sudo write
+command W w !sudo tee % > /dev/null
+
 let g:netrw_home = '~/.cache'
 set showmode            " Show current mode.
 set ruler               " Show the line and column numbers of the cursor.
