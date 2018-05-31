@@ -7,6 +7,10 @@ if &term =~ '256color'
   set t_ut=
 endif
 
+" For neovim in virtual envs ??
+"let g:python_host_prog = '/full/path/to/neovim2/bin/python'
+"let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
+
 "set t_Co=256
 set termguicolors
 "let g:onedark_termcolors=16

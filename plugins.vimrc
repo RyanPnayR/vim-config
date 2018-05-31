@@ -15,6 +15,7 @@ Plug 'valloric/youcompleteme'
 "let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_python_binary_path = 'python'
 Plug 'easymotion/vim-easymotion'
 Plug 'sirver/ultisnips'
@@ -45,6 +46,17 @@ Plug 'tpope/vim-capslock'
 Plug 'azizlight/fish.vim'
 Plug 'glench/vim-jinja2-syntax'
 Plug 'leafgarland/typescript-vim'
+Plug 'udalov/kotlin-vim'
+"Plug 'shougo/deoplete.nvim'
+"if has('nvim')
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+  "Plug 'Shougo/deoplete.nvim'
+  "Plug 'roxma/nvim-yarp'
+  "Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+"let g:deoplete#enable_at_startup = 1
+"Plug 'zchee/deoplete-jedi'
 
 " Color-schemes
 Plug 'flazz/vim-colorschemes'
