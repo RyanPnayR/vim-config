@@ -19,3 +19,8 @@ endsnippet
 snippet "(\w+)? = nt" "Namedtuple" r
 `!p snip.rv = match.group(1)` = namedtuple('`!p snip.rv = match.group(1)`', [$0])
 endsnippet
+
+snippet logger "Create logger"
+import logging
+logger = logging.getLogger(__name__)
+endsnippet
