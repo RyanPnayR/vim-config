@@ -88,3 +88,6 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
+
+" Ctrl-P ignore
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
