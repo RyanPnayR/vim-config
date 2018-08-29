@@ -12,6 +12,9 @@ nnoremap <Leader>o zO
 nnoremap <Leader>j zj
 nnoremap <Leader>k zk
 
+" Search for visually selected text
+vnoremap // y/<C-R>"<CR>
+
 " CtrlP
 " Open file menu
 nnoremap <Leader>p :CtrlP<CR>
@@ -40,6 +43,9 @@ nnoremap <BS> gg
 " Stop cursor from jumping over wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+" Re-indent all lines and move back to previous position.
+nnoremap <C-i> gg=G``zz
 
 " Scroll up and down a bit faster
 nnoremap <C-e> 5<C-e>

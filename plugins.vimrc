@@ -31,7 +31,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-haml'
 Plug 'jiangmiao/auto-pairs'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'css'] }
+Plug 'mattn/emmet-vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
@@ -47,6 +47,8 @@ Plug 'azizlight/fish.vim'
 Plug 'glench/vim-jinja2-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'udalov/kotlin-vim'
+Plug 'fisadev/vim-isort'
+Plug 'mxw/vim-jsx'
 "Plug 'shougo/deoplete.nvim'
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
