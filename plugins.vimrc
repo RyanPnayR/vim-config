@@ -50,6 +50,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'fisadev/vim-isort'
 Plug 'mxw/vim-jsx'
+Plug 'benmills/vimux'
+Plug 'tyewang/vimux-jest-test'
 "Plug 'shougo/deoplete.nvim'
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
