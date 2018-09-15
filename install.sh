@@ -59,6 +59,16 @@ do_install() {
   fail "Could not create symlink: ln -s $config_dir $vim_dir"
 }
 
+do_plug_install() {
+  echo "Installing vim plugins..."
+  nvim +PluginInstall && return 0
+}
+
+do_ycm_install() {
+  echo "Installing youcompleteme..."
+  "python $vim_dir/plugged/youcompleteme/install.py"
+}
+
 skip_backup() {
   echo "Skipping backup of existing $vim_dir"
 }
@@ -71,7 +81,8 @@ main() {
   # Abort if we are already installed
   [ -L $vim_dir ] && cd $vim_dir && realpath=$(pwd -P)
   if [[ "$realpath" = "$config_dir" ]]; then
-    echo "Already installed"; echo "Done"; exit 0
+    echo "$config_dir already exists"
+    do_plug_install && do_ycm_install && echo "Done" && exit 0
   fi
 
   # Ask for backup if necessary
@@ -79,8 +90,7 @@ main() {
   if maybe_do_backup ; then
     do_delete
     do_install
-    echo "Done"
-    exit 0
+    do_plug_install && do_ycm_install && echo "Done" && exit 0
   fi
 }
 
