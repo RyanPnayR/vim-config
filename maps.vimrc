@@ -45,7 +45,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Re-indent all lines and move back to previous position.
-nnoremap <C-i> gg=G``zz
+nnoremap <C-_> gg=G``zz
 
 " Scroll up and down a bit faster
 nnoremap <C-e> 5<C-e>

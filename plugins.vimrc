@@ -52,6 +52,10 @@ Plug 'fisadev/vim-isort'
 Plug 'mxw/vim-jsx'
 Plug 'benmills/vimux'
 Plug 'tyewang/vimux-jest-test'
+Plug 'vim-scripts/indentpython.vim'
+
+Plug 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
 "Plug 'shougo/deoplete.nvim'
 "if has('nvim')
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -84,6 +88,15 @@ let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
+
+"let g:airline_section_a = ''
+"let g:airline_section_b = ''
+"let g:airline_section_c = ''
+let g:airline_section_x = ''
+let g:airline_section_y = 'b%n'
+"let g:airline_section_z = airline#section#create(['%3p%%', ' %l', ':%3v'])
+let g:airline_section_z = '%p%%  %l/%L :%v'
+
 "Nerdtree
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
