@@ -2,25 +2,16 @@ call plug#begin('~/.vim/plugged')
 
 " Plugs
 Plug 'valloric/youcompleteme'
-" python with virtualenv support
-"python << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-    "project_base_dir = os.environ['VIRTUAL_ENV']
-    "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    "execfile(activate_this, dict(__file__=activate_this))
-"EOF
-"let g:ycm_server_python_interpreter='python3'
-"let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_python_binary_path = 'python'
+
 Plug 'easymotion/vim-easymotion'
 Plug 'sirver/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tmhedberg/simpylfold'
+Plug 'konfekt/fastfold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
@@ -35,24 +26,29 @@ Plug 'mattn/emmet-vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
-" Plug '2072/php-indenting-for-vim'
 Plug 'captbaritone/better-indent-support-for-php-with-html'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rizzatti/dash.vim'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-capslock'
-Plug 'tpope/vim-sleuth'
-"Plug 'dag/vim-fish'
 Plug 'azizlight/fish.vim'
-Plug 'glench/vim-jinja2-syntax'
-Plug 'leafgarland/typescript-vim'
+Plug 'lepture/vim-jinja'
 Plug 'udalov/kotlin-vim'
 Plug 'fisadev/vim-isort'
 Plug 'mxw/vim-jsx'
 Plug 'benmills/vimux'
 Plug 'tyewang/vimux-jest-test'
 Plug 'vim-scripts/indentpython.vim'
+
+
+" Plug '2072/php-indenting-for-vim'
+"Plug 'tpope/vim-capslock'
+"Plug 'tpope/vim-sleuth'
+"Plug 'dag/vim-fish'
+"Plug 'glench/vim-jinja2-syntax'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'eslint/eslint'
+"Plug 'w0rp/ale'
 
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
@@ -107,3 +103,5 @@ let g:NERDTreeWinSize = 50
 
 " Ctrl-P ignore
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+let g:ale_javascript_eslint_executable = 'npm run eslint --'
